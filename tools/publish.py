@@ -23,17 +23,28 @@ def out(cmd, **kw):
     r = subprocess.run(cmd, capture_output=True, **kw)
     return r.stdout.decode().strip()
 
-def derive_pub_der_b64(priv_path, tag, work):
+def keyfile(value, tag, work):
+    """Accept a path OR inline PEM content (GH secret) and return a real path."""
+    if not value:
+        raise SystemExit('key value is empty')
+    if value.lstrip().startswith('-----BEGIN'):
+        os.makedirs(work, exist_ok=True)
+        path = os.path.join(work, tag + '.key.pem')
+        open(path, 'w').write(value if value.endswith('\n') else value + '\n')
+        return path
+    return value
+
+def derive_pub_der_b64(priv, tag, work):
     os.makedirs(work, exist_ok=True)
     der = os.path.join(work, tag+'.pub.der')
-    run(['openssl','pkey','-in',priv_path,'-pubout','-outform','DER','-out',der])
+    run(['openssl','pkey','-in',keyfile(priv,tag+'_pub',work),'-pubout','-outform','DER','-out',der])
     return base64.b64encode(open(der,'rb').read()).decode()
 
-def sign(data, priv_path, tag, work):
+def sign(data, priv, tag, work):
     os.makedirs(work, exist_ok=True)
     m = os.path.join(work, tag+'.msg'); s = os.path.join(work, tag+'.sig')
     open(m,'wb').write(data)
-    run(['openssl','dgst','-sha256','-sign',priv_path,'-out',s,m])
+    run(['openssl','dgst','-sha256','-sign',keyfile(priv,tag+'_sign',work),'-out',s,m])
     return base64.b64encode(open(s,'rb').read()).decode()
 
 def load_config():
