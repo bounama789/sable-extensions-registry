@@ -1,0 +1,64 @@
+name: registry
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: registry
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify conformance + submissions
+        run: python3 tools/verify.py
+
+  publish:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify before building
+        run: python3 tools/verify.py
+
+      - name: Build signed catalog
+        env:
+          SABLE_ROOT_KEY: ${{ secrets.SABLE_ROOT_KEY }}
+          SABLE_WORK: ${{ runner.temp }}/sable-catalog
+        run: python3 tools/build-catalog.py
+
+      - name: Commit catalog.json
+        run: |
+          git config user.name 'Sable Registry CI'
+          git config user.email 'ci@sable.local'
+          git add catalog.json
+          git diff --cached --quiet || git commit -m 'chore: rebuild signed catalog from entries'
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deploy
+        uses: actions/deploy-pages@v4

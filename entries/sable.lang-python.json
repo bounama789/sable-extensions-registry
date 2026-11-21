@@ -1,0 +1,24 @@
+{
+  "id": "sable.lang-python",
+  "publisher": "sable",
+  "name": "Python",
+  "summary": "Python grammar and queries",
+  "kinds": [
+    "language"
+  ],
+  "publisherPublicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEV1hHjvdF7dal5fs/CnXDPEA8ahesmDevhHkmIoURF3qAEwDWuhZ4d1fz6wgxlrCgHrVyKvviPzk38VclB+LBjQ==",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "ref": "0000000000000000000000000000000000000000",
+      "repo": "bounama789/sable-ext-python",
+      "sha256": "ee01c2cfc4e393afb2fc1a8e26979af353def1fbbb94e91d121520e372e5b60b",
+      "signature": "MEUCIQDyA3rQhNZpp9Sc3bj6QkR9fa+SL0fh5lFwnJYlxG/r/wIgOk7+GxcWHDWGexCn+wv3f13SvYwGB+lClWR9aNInEE4=",
+      "permissions": [
+        "workspace.read"
+      ],
+      "minApi": 26,
+      "size": 546323
+    }
+  ]
+}
