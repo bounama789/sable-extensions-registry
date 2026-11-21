@@ -10,15 +10,15 @@
   "versions": [
     {
       "version": "1.1.0",
-      "ref": "20f7ca7a14abd6886e213a7bd36b671123da9d5b",
+      "ref": "21c8535ccc6a558db88c0b301aa677254d2df3c0",
       "repo": "bounama789/sable-ext-python",
-      "sha256": "2f1596bc542a89a7e0017922fbf00688b3eaac436e34bef22fda492a689f3852",
-      "signature": "MEYCIQC774evDQOVMdnKWew17GpYq+tGAV0lb7Xhe/+aTnFUYgIhAMAWhbAYAuDtQ1LncMxTPeQPqYSOt4lq6W6GyZ8K0WF3",
+      "sha256": "c97aa2ad96535c8b9fd54540ca11d88297baf19401ce9d728456f2ade5dbe5b3",
+      "signature": "MEYCIQDY20x4CYWTk0pfj7QY7IJQbVx6y/xMpgl+j0CP+ZvYzQIhAKGF+qwcqE5kVjTslhCFiG2LJGDl41uxlgkQFr3V43BG",
       "permissions": [
         "workspace.read"
       ],
       "minApi": 26,
-      "size": 546551
+      "size": 547718
     }
   ]
 }
