@@ -1,0 +1,24 @@
+{
+  "id": "sable.theme-midnight",
+  "publisher": "sable",
+  "name": "Midnight",
+  "summary": "A quiet dark syntax theme",
+  "kinds": [
+    "theme"
+  ],
+  "publisherPublicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEV1hHjvdF7dal5fs/CnXDPEA8ahesmDevhHkmIoURF3qAEwDWuhZ4d1fz6wgxlrCgHrVyKvviPzk38VclB+LBjQ==",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "ref": "d47778ea50e05cf79ff06743ced80766ed7e1778",
+      "repo": "bounama789/sable-ext-theme-midnight",
+      "sha256": "7d7513babb71d12da91231d7e45741ce937543f5975958ebb17439ff3a5323d9",
+      "signature": "MEUCIQDTw7+c86i1ISWffbSN/OBEzEQibCl+wg1/sHPS2e2ePQIgSTLkHEDMcj9O1ti6LuyGoGvQMdyV1CA+ESK5bIpMLo8=",
+      "permissions": [
+        "workspace.read"
+      ],
+      "minApi": 26,
+      "size": 1210
+    }
+  ]
+}
