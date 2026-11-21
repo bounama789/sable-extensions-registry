@@ -1,8 +1,8 @@
 {
   "id": "sable.theme-midnight",
   "publisher": "sable",
-  "name": "Midnight",
-  "summary": "A quiet dark syntax theme",
+  "name": "Midnight Ember",
+  "summary": "A warm ember dark theme \u2014 distinct from the cool default",
   "kinds": [
     "theme"
   ],
@@ -10,15 +10,15 @@
   "versions": [
     {
       "version": "1.0.0",
-      "ref": "d47778ea50e05cf79ff06743ced80766ed7e1778",
+      "ref": "5f48daa10acad86d2b13a692a29defed0dd366a7",
       "repo": "bounama789/sable-ext-theme-midnight",
-      "sha256": "7d7513babb71d12da91231d7e45741ce937543f5975958ebb17439ff3a5323d9",
-      "signature": "MEUCIQDTw7+c86i1ISWffbSN/OBEzEQibCl+wg1/sHPS2e2ePQIgSTLkHEDMcj9O1ti6LuyGoGvQMdyV1CA+ESK5bIpMLo8=",
+      "sha256": "11cae0247c1d47407b2f64d52d00bf6393628afd42a24dd03c8745a8b21cd3e5",
+      "signature": "MEYCIQDW05ByyeLSzqtr08O9QERUvtCbqqxsdJADEQNG4ru90wIhAO6M7o1FD+EjPi4qwMthZZcwf6fnFTPrWUkpyhCgPM4l",
       "permissions": [
         "workspace.read"
       ],
       "minApi": 26,
-      "size": 1210
+      "size": 1216
     }
   ]
 }
