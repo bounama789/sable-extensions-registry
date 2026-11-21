@@ -2,23 +2,23 @@
   "id": "sable.lang-python",
   "publisher": "sable",
   "name": "Python",
-  "summary": "Python grammar and queries",
+  "summary": "Python language support: grammar, queries, LSP, detection",
   "kinds": [
     "language"
   ],
   "publisherPublicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEV1hHjvdF7dal5fs/CnXDPEA8ahesmDevhHkmIoURF3qAEwDWuhZ4d1fz6wgxlrCgHrVyKvviPzk38VclB+LBjQ==",
   "versions": [
     {
-      "version": "1.0.0",
-      "ref": "0000000000000000000000000000000000000000",
+      "version": "1.1.0",
+      "ref": "20f7ca7a14abd6886e213a7bd36b671123da9d5b",
       "repo": "bounama789/sable-ext-python",
-      "sha256": "ee01c2cfc4e393afb2fc1a8e26979af353def1fbbb94e91d121520e372e5b60b",
-      "signature": "MEUCIQDyA3rQhNZpp9Sc3bj6QkR9fa+SL0fh5lFwnJYlxG/r/wIgOk7+GxcWHDWGexCn+wv3f13SvYwGB+lClWR9aNInEE4=",
+      "sha256": "2f1596bc542a89a7e0017922fbf00688b3eaac436e34bef22fda492a689f3852",
+      "signature": "MEYCIQC774evDQOVMdnKWew17GpYq+tGAV0lb7Xhe/+aTnFUYgIhAMAWhbAYAuDtQ1LncMxTPeQPqYSOt4lq6W6GyZ8K0WF3",
       "permissions": [
         "workspace.read"
       ],
       "minApi": 26,
-      "size": 546323
+      "size": 546551
     }
   ]
 }
